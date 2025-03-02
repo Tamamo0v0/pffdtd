@@ -37,9 +37,12 @@ sim_setup(
     fmax=500.0,
     save_folder='../data/sim_data/ctk_cart/viz', #can run python from here
     compress=0,
-    draw_vox=True,
+    draw_vox=False,
     draw_backend='mayavi', #will draw 'voxelization' (spheres are active boundary nodes, cubes rigid boundary nodes)
 )
 
 #then run with python and 3D visualization:
 #   python3 -m fdtd.sim_fdtd --data_dir='../data/sim_data/ctk_cart/viz' --plot --draw_backend='mayavi' --json_model='../data/models/CTK_Church/model_export.json'
+
+#no visual for qt reason
+#   python3 -m fdtd.sim_fdtd --data_dir='../data/sim_data/ctk_cart/viz' --draw_backend='mayavi' --json_model='../data/models/CTK_Church/model_export.json'
